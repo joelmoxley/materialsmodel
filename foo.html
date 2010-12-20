@@ -1,0 +1,687 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>LME Free Data Service</title>
+		<LINK REL="stylesheet" href="Styles/styles.css">
+		<LINK REL="stylesheet" href="/scripts/typestyles.css">
+		<meta name="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</HEAD>
+	<BODY BGCOLOR="#999999" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0"
+		CLASS="background">
+		<form name="_form" method="post" action="Dataprices_MM_OfficialPrices.aspx" id="_form">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMzQ1OTgxODE3D2QWAgIBD2QWBgIMD2QWAmYPZBZqZg9kFgJmD2QWAmYPDxYCHgtOYXZpZ2F0ZVVybAUwaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9pbmRleC5hc3B4ZGQCAQ9kFgJmD2QWAmYPDxYCHwAFNmh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvMzEzNDcxL2VkaXQuYXNweGRkAgIPZBYCZg9kFgJmDw8WAh8ABTpodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5LzMxMzQ3MS9wYXNzd29yZC5hc3B4ZGQCAw9kFgJmD2QWAmYPDxYEHwAFMWh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvc2VhcmNoLmFzcHgeB1Zpc2libGVoZGQCBA8PFgIfAWhkFgJmD2QWAmYPDxYCHwFoZGQCBQ8PFgIfAWhkZAIGD2QWAmYPZBYCZg8PFgIfAAU5aHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EZWxldGVDb250YWN0cy5hc3B4ZGQCCg9kFgJmD2QWAmYPDxYCHwAFQmh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19kYWlseV9tZXRhbHMuYXNweGRkAgsPZBYCZg9kFgJmDw8WAh8ABUlodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfZGFpbHlfbWV0YWxzLmFzcHgjc3RvY2tzZGQCDA9kFgJmD2QWAmYPDxYCHwAFSGh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19kYWlseV9tZXRhbHMuYXNweCNpbmRleGRkAg0PZBYCZg9kFgJmDw8WAh8ABVNodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9hdmVyYWdlX3ByaWNlc19tZXRhbHMuYXNweGRkAg4PZBYCZg9kFgJmDw8WAh8ABUFodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfcHJpY2VncmFwaHMuYXNweGRkAhIPZBYCZg9kFgJmDw8WAh8ABUtodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfU3RlZWxzX09mZmljaWFsUHJpY2VzLmFzcHhkZAITD2QWAmYPZBYCZg8PFgIfAAVSaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX1N0ZWVsc19PZmZpY2lhbFByaWNlcy5hc3B4I1N0b2Nrc2RkAhQPZBYCZg9kFgJmDw8WAh8ABVJodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9hdmVyYWdlX3ByaWNlc19zdGVlbC5hc3B4ZGQCFQ9kFgJmD2QWAmYPDxYCHwAFR2h0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19QcmljZUdyYXBocy5hc3B4I1N0ZWVsZGQCGQ9kFgJmD2QWAmYPDxYCHwAFR2h0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19NTV9PZmZpY2lhbFByaWNlcy5hc3B4ZGQCGg9kFgJmD2QWAmYPDxYCHwAFTmh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19NTV9PZmZpY2lhbFByaWNlcy5hc3B4I1N0b2Nrc2RkAhsPZBYCZg9kFgJmDw8WAh8ABU9odHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9hdmVyYWdlX3ByaWNlc19NTS5hc3B4ZGQCHA9kFgJmD2QWAmYPDxYCHwAFRGh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19QcmljZUdyYXBocy5hc3B4I01NZGQCIA9kFgJmD2QWAmYPDxYCHwAFPWh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRmFpbG92ZXIvTUlDX0lucHV0LmFzcHhkZAIhD2QWAmYPZBYCZg8PFgIfAAU8aHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9GYWlsb3Zlci9NSUNfVmlldy5hc3B4ZGQCIg9kFgJmD2QWAmYPDxYCHwAFPmh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRmFpbG92ZXIvTU9JQ19JbnB1dC5hc3B4ZGQCIw9kFgJmD2QWAmYPDxYCHwAFPWh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRmFpbG92ZXIvTU9JQ19WaWV3LmFzcHhkZAIkD2QWAmYPZBYCZg8PFgIfAAU9aHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9GYWlsb3Zlci9TSUNfSW5wdXQuYXNweGRkAiUPZBYCZg9kFgJmDw8WAh8ABTxodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0ZhaWxvdmVyL1NJQ19WaWV3LmFzcHhkZAImDw8WAh8BZ2QWAmYPZBYCZg8PFgQfAAU/aHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9GYWlsb3Zlci9NMV9PdmVyVmlldy5hc3B4HwFnZGQCJw9kFgJmD2QWAmYPDxYCHwAFQGh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRmFpbG92ZXIvVG9sZXJhbmNlTWFuLmFzcHhkZAIoD2QWAmYPZBYCZg8PFgIfAAVGaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9GYWlsb3Zlci9QcmV2aW91c0RheVRyYWRpbmcuYXNweGRkAikPZBYCZg9kFgJmDw8WAh8ABUhodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0ZhaWxvdmVyL1BlcmlvZGljUmVwb3J0c19WaWV3LmFzcHhkZAIqDw8WAh8BaGQWAmYPZBYCZg8PFgIfAAVEaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX2RhaWx5X3BsYXN0aWNzLmFzcHhkZAIrD2QWAmYPZBYCZg8PFgIfAAVLaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX2RhaWx5X3ByaWNlc19wbGFzdGljcy5hc3B4ZGQCLA9kFgJmD2QWAmYPDxYCHwAFS2h0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19kYWlseV9wbGFzdGljc19zdG9ja3MuYXNweGRkAi0PDxYCHwFoZBYCZg9kFgJmDw8WAh8ABVJodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfZGFpbHlfcHJpY2VzX3BsYXN0aWNzX3N0b2Nrcy5hc3B4ZGQCLg8PFgIfAWhkFgJmD2QWAmYPDxYCHwAFT2h0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19kYWlseV9wbGFzdGljc19zdG9ja3NfcGxnLmFzcHhkZAIvD2QWAmYPZBYCZg8PFgIfAAVMaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX2RhaWx5X3BsYXN0aWNzX2Nsb3NpbmcuYXNweGRkAjAPZBYCZg9kFgJmDw8WAh8ABVlodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9hdmVyYWdlX3ByaWNlc19wbGFzdGljc19yZXYuYXNweGRkAjEPDxYCHwFoZBYCZg9kFgJmDw8WAh8ABVlodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9hdmVyYWdlX3ByaWNlc19wbGFzdGljc19yZXYuYXNweGRkAjIPZBYCZg9kFgJmDw8WAh8ABUpodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfcHJpY2VncmFwaHMuYXNweCNwbGFzdGljc2RkAjYPZBYCZg9kFgJmDw8WAh8ABVFodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9udGhseV9sbWVtaW5pc19zZXR0bGVtZW50LmFzcHhkZAI3D2QWAmYPZBYCZg8PFgIfAAVLaHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX2RhaWx5X2xtZW1pbmlfY2xvc2luZy5hc3B4ZGQCOw9kFgJmD2QWAmYPDxYCHwAFOGh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19vaS5hc3B4ZGQCPA8PFgIfAWhkFgJmD2QWAgIBDw8WAh8ABTlodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfbW9pLmFzcHhkZAI9Dw8WAh8BaGQWAmYPZBYCAgEPDxYCHwAFOWh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19lb2kuYXNweGRkAj4PZBYCZg9kFgJmDw8WAh8ABURodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfd2FycmFudGJhbmRpbmcuYXNweGRkAj8PZBYCZg9kFgJmDw8WAh8ABURodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfZnV0dXJlc2JhbmRpbmcuYXNweGRkAkAPZBYCZg9kFgJmDw8WAh8ABT9odHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L0RhdGFwcmljZXNfd2NiYW5kaW5nLmFzcHhkZAJBD2QWAmYPZBYCZg8PFgIfAAU/aHR0cHM6Ly9zZWN1cmUubG1lLmNvbS9EYXRhL2NvbW11bml0eS9EYXRhcHJpY2VzX3d0YmFuZGluZy5hc3B4ZGQCQg9kFgJmD2QWAmYPDxYCHwAFRWh0dHBzOi8vc2VjdXJlLmxtZS5jb20vRGF0YS9jb21tdW5pdHkvRGF0YXByaWNlc19tb250aGx5X3ZvbHVtZXMuYXNweGRkAkMPZBYCZg9kFgJmDw8WAh8ABTtodHRwczovL3NlY3VyZS5sbWUuY29tL0RhdGEvY29tbXVuaXR5L3BsYXRmb3JtX3ZvbHVtZXMuYXNweGRkAkYPZBYCZg9kFgJmDw8WBB8ABR9odHRwOi8vd3d3LmxtZS5jb20vZ2xvc3NhcnkuYXNwHgZUYXJnZXQFBl9ibGFua2RkAkcPZBYCZg9kFgJmDw8WBB8ABR9odHRwOi8vd3d3LmxtZS5jb20vY2FsZW5kYXIuYXNwHwIFBl9ibGFua2RkAkgPZBYCZg9kFgJmDw8WBB8ABSZodHRwOi8vd3d3LmxtZS5jb20vaGlzdG9yaWNhbF9kYXRhLmFzcB8CBQZfYmxhbmtkZAIOD2QWAmYPZBYCAgEPDxYCHgRUZXh0BQhqZm1veGxleWRkAhAPZBYKZg8PFgIfAWhkZAIBDw8WAh8BaGRkAgIPEGQPFh9mAgECAgIDAgQCBQIGAgcCCAIJAgoCCwIMAg0CDgIPAhACEQISAhMCFAIVAhYCFwIYAhkCGgIbAhwCHQIeFh8QBQExBQExZxAFATIFATJnEAUBMwUBM2cQBQE0BQE0ZxAFATUFATVnEAUBNgUBNmcQBQE3BQE3ZxAFATgFAThnEAUBOQUBOWcQBQIxMAUCMTBnEAUCMTEFAjExZxAFAjEyBQIxMmcQBQIxMwUCMTNnEAUCMTQFAjE0ZxAFAjE1BQIxNWcQBQIxNgUCMTZnEAUCMTcFAjE3ZxAFAjE4BQIxOGcQBQIxOQUCMTlnEAUCMjAFAjIwZxAFAjIxBQIyMWcQBQIyMgUCMjJnEAUCMjMFAjIzZxAFAjI0BQIyNGcQBQIyNQUCMjVnEAUCMjYFAjI2ZxAFAjI3BQIyN2cQBQIyOAUCMjhnEAUCMjkFAjI5ZxAFAjMwBQIzMGcQBQIzMQUCMzFnZGQCAw8QZA8WDGYCAQICAgMCBAIFAgYCBwIIAgkCCgILFgwQBQNKYW4FATFnEAUDRmViBQEyZxAFA01hcgUBM2cQBQNBcHIFATRnEAUDTWF5BQE1ZxAFA0p1bgUBNmcQBQNKdWwFATdnEAUDQXVnBQE4ZxAFA1NlcAUBOWcQBQNPY3QFAjEwZxAFA05vdgUCMTFnEAUDRGVjBQIxMmdkZAIEDxBkDxYBZhYBEAUEMjAxMAUEMjAxMGdkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUTX3NlYXJjaEZvcm0kX3NlYXJjaGdlVD5pPU17gUEcBZIGbh2fN1Pm" />
+
+			<table border="0" cellpadding="0" cellspacing="0" width="741">
+				<tr>
+					<td><img src="/gfxs/top_banner_left.jpg" width="610" height="74" alt="London Metal Exchange - The world centre for non-ferrous metal trading"
+							border="0"></td>
+					<td><img src="/gfxs/top_bar_nav_block.gif" width="71" height="74" alt="London Metal Exchange - The world centre for non-ferrous metal trading"
+							border="0"></td>
+					<td><img src="/gfxs/top_banner_right.jpg" width="60" height="74" alt="London Metal Exchange - The world centre for non-ferrous metal trading"
+							border="0"></td>
+				</tr>
+			</table>
+			<TABLE WIDTH="750" BORDER="0" CELLSPACING="0" CELLPADDING="0">
+				<TBODY>
+					<TR ALIGN="left" VALIGN="top">
+						<TD WIDTH="16" ROWSPAN="4"></TD>
+						<TD><img id="_image1" hspace="0" vspace="0" src="../gfxs/plastic-logo.gif" height="12" width="139" border="0" /></TD>
+						<TD><img id="_image2" hspace="0" vspace="0" src="../gfxs/spacer.gif" height="5" width="13" border="0" /></TD>
+						<TD><img id="_image3" hspace="0" vspace="0" src="../gfxs/spacer.gif" height="5" width="420" border="0" /></TD>
+						<TD><img id="_image4" hspace="0" vspace="0" src="../gfxs/spacer.gif" height="5" width="13" border="0" /></TD>
+						<TD><img id="_image5" hspace="0" vspace="0" src="../gfxs/spacer.gif" height="5" width="128" border="0" /></TD>
+					</TR>
+					<TR ALIGN="left" VALIGN="top">
+						<TD WIDTH="139" rowspan="2">
+							<TABLE WIDTH="101%" BORDER="0" CELLSPACING="0" CELLPADDING="2">
+								<TR>
+									<TD>
+<TABLE cellSpacing=0 cellPadding=2 width="101%" border=0>
+    <TBODY>
+        <TR><TD><img id="_menu_Image2" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></TD></TR>        
+    </TBODY>
+</TABLE><table id="_subMenu__subMenu" cellspacing="0" cellpadding="2" border="0" width="100%">
+	<tr id="_subMenu__trHome">
+		<td id="_subMenu_Tablecell1" NAME="Tablecell1"><a id="_subMenu__home" class="mainnav" href="https://secure.lme.com/Data/community/index.aspx">Home</a></td>
+	</tr><tr id="_subMenu__trProfile">
+		<td id="_subMenu_Tablecell2" NAME="Tablecell2"><a id="_subMenu__editProfile" class="mainnav" href="https://secure.lme.com/Data/community/313471/edit.aspx">Edit Profile</a></td>
+	</tr><tr id="_subMenu__trPassword">
+		<td id="_subMenu_Tablecell3" NAME="Tablecell3"><a id="_subMenu__changePassword" class="mainnav" href="https://secure.lme.com/Data/community/313471/password.aspx">Edit Password</a></td>
+	</tr><tr id="_subMenu__trSearch">
+		<td id="_subMenu_Tablecell4" NAME="Tablecell4"></td>
+	</tr><tr id="_subMenu_TablerowSpacer1" NAME="Tablerow1">
+		<td id="_subMenu_Tablecell11x" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trMigratedHeader" NAME="_trMigratedHeader">
+		<td id="_subMenu_Tablecell13" NAME="Tablecell5"><span id="_subMenu_MigLabel" class="bodytextblack">Non Ferrous Metals</span></td>
+	</tr><tr id="_subMenu__trMigratedHeader_Underline" NAME="_trMigratedHeader_Underline">
+		<td id="_subMenu_Tablecell14" NAME="Tablecell6"><img id="_subMenu_Image3" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu__trdailyStocksPricesMetals">
+		<td id="_subMenu_Tablecell15"><a id="_subMenu__dailyStocksPricesMetals" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_metals.aspx">Official Prices</a></td>
+	</tr><tr id="_subMenu__trOpeningStocks">
+		<td id="_subMenu_Tablecell16"><a id="_subMenu__openingStocks" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_metals.aspx#stocks">Opening Stocks</a></td>
+	</tr><tr id="_subMenu__trDailyIndex">
+		<td id="_subMenu_Tablecell17"><a id="_subMenu__dailyIndex" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_metals.aspx#index">Daily Index Value</a></td>
+	</tr><tr id="_subMenu__trMonthlyAveragesMetals">
+		<td id="_subMenu_Tablecell18"><a id="_subMenu__monthlyAveragesMetals" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_average_prices_metals.aspx">Monthly Averages</a></td>
+	</tr><tr id="_subMenu__trPriceGraphsMetals">
+		<td id="_subMenu_Tablecell32"><a id="_subMenu__priceGraphsMetals" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_pricegraphs.aspx">Price Graphs</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer1x" NAME="Tablerow1">
+		<td id="_subMenu_Tablecell11xx" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trSteelsHeader" NAME="_trMigratedHeader">
+		<td id="_subMenu_Tablecell53" NAME="Tablecell5"><span id="_subMenu_Label3" class="bodytextblack">Steel</span></td>
+	</tr><tr id="_subMenu_Tablerow2" NAME="_trMigratedHeader_Underline">
+		<td id="_subMenu_Tablecell54" NAME="Tablecell6"><img id="_subMenu_Image6" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu__trSteelsOfficialPrices">
+		<td id="_subMenu_Tablecell55"><a id="_subMenu_hypSteelOfficialPrices" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_Steels_OfficialPrices.aspx">Official Prices</a></td>
+	</tr><tr id="_subMenu__trSteelsOpeningStocks">
+		<td id="_subMenu_Tablecell56"><a id="_subMenu_hypSteelOpeningStocks" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_Steels_OfficialPrices.aspx#Stocks">Opening Stocks</a></td>
+	</tr><tr id="_subMenu__trSteelsMonthlyAverages">
+		<td id="_subMenu_Tablecell57"><a id="_subMenu_hypSteelMonthlyAverages" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_average_prices_steel.aspx">Monthly Averages</a></td>
+	</tr><tr id="_subMenu__trSteelsPriceGraphs">
+		<td id="_subMenu_Tablecell59"><a id="_subMenu_hypSteelPriceGraphs" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_PriceGraphs.aspx#Steel">Price Graphs</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer2x" NAME="Tablerow1">
+		<td id="_subMenu_Tablecell12x" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu_Tablerow1" NAME="_trMigratedHeader">
+		<td id="_subMenu_Tablecell60" NAME="Tablecell5"><span id="_subMenu_Label4" class="bodytextblack">Minor Metals</span></td>
+	</tr><tr id="_subMenu_Tablerow3" NAME="_trMigratedHeader_Underline">
+		<td id="_subMenu_Tablecell61" NAME="Tablecell6"><img id="_subMenu_Image7" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu_Tablerow4">
+		<td id="_subMenu_Tablecell62"><a id="_subMenu_hypMMOfficialPrices" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_MM_OfficialPrices.aspx">Official Prices</a></td>
+	</tr><tr id="_subMenu_Tablerow5">
+		<td id="_subMenu_Tablecell63"><a id="_subMenu_hypMMOpeningStocks" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_MM_OfficialPrices.aspx#Stocks">Opening Stocks</a></td>
+	</tr><tr id="_subMenu_Tablerow6">
+		<td id="_subMenu_Tablecell64"><a id="_subMenu_hypMMMonthlyAverages" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_average_prices_MM.aspx">Monthly Averages</a></td>
+	</tr><tr id="_subMenu_Tablerow7">
+		<td id="_subMenu_Tablecell65"><a id="_subMenu_hypMMPriceGraphs" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_PriceGraphs.aspx#MM">Price Graphs</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer2y" NAME="Tablerow1">
+		<td id="_subMenu_Tablecell12y" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trPlasticsHeader" NAME="_trPlasticsHeader">
+		<td id="_subMenu_Tablecell7" NAME="Tablecell5"><span id="_subMenu__header" class="bodytextblack">Plastics</span></td>
+	</tr><tr id="_subMenu__trPlasticsHeader_Underline" NAME="_trPlasticsHeader_Underline">
+		<td id="_subMenu_Tablecell8" NAME="Tablecell6"><img id="_subMenu_Image2" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu_tmpM1Overview">
+		<td id="_subMenu_Tablecell433"><a id="_subMenu_hypM1Overview" class="mainnav" href="https://secure.lme.com/Data/community/Failover/M1_OverView.aspx"></a></td>
+	</tr><tr id="_subMenu__trDailyPricesPlastics">
+		<td id="_subMenu_Tablecell13x"><a id="_subMenu__dailyPricesPlastics" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_prices_plastics.aspx">Official Prices</a></td>
+	</tr><tr id="_subMenu__trDailyStocks">
+		<td id="_subMenu_Tablecell10"><a id="_subMenu__dailyStocks" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_plastics_stocks.aspx">Opening Stocks</a></td>
+	</tr><tr id="_subMenu__trDailyClosing">
+		<td id="_subMenu_Tablecell11"><a id="_subMenu__dailyClosing" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_plastics_closing.aspx"></a></td>
+	</tr><tr id="_subMenu__trMonthlyAveragesPlastics">
+		<td id="_subMenu_Tablecell19"><a id="_subMenu__monthlyAveragesPlastics" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_average_prices_plastics_rev.aspx">Monthly Averages</a></td>
+	</tr><tr id="_subMenu__trPriceGraphs">
+		<td id="_subMenu_Tablecell23"><a id="_subMenu__priceGraphs" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_pricegraphs.aspx#plastics">Price Graphs</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer2" NAME="Tablerow1">
+		<td id="_subMenu_Tablecell12" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trLMEminiHeader" NAME="_trLMEminiHeader">
+		<td id="_subMenu_Tablecell12xx" NAME="Tablecell5"><span id="_subMenu_Label1" class="bodytextblack">LMEmini</span></td>
+	</tr><tr id="_subMenu__trLMEminiHeader_Underline" NAME="_trLMEminiHeader_Underline">
+		<td id="_subMenu_Tablecell20" NAME="Tablecell6"><img id="_subMenu_Image1" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu__trSettlement">
+		<td id="_subMenu_Tablecell21"><a id="_subMenu__lmeMiniSettlement" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_lmeminis_settlement.aspx">Settlement Prices</a></td>
+	</tr><tr id="_subMenu__trMiniClosingPrices">
+		<td id="_subMenu_Tablecell22"><a id="_subMenu__lmeMiniClosingPrices" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_daily_lmemini_closing.aspx">Closing Prices</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer3" NAME="Tablerow1">
+		<td id="_subMenu_TableSpacerCell1" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trComplianceHeader" NAME="_trComplianceHeader">
+		<td id="_subMenu_Tablecell24" NAME="Tablecell5"><span id="_subMenu_Label2" class="bodytextblack">Reports</span></td>
+	</tr><tr id="_subMenu__trComplianceHeader_Underline" NAME="_trComplianceHeader_Underline">
+		<td id="_subMenu_Tablecell25" NAME="Tablecell6"><img id="_subMenu_Image4" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu__trOpenInterest">
+		<td id="_subMenu_Tablecell26"><a id="_subMenu__openInterest" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_oi.aspx">Open Interest</a></td>
+	</tr><tr id="_subMenu__trWarrantBanding">
+		<td id="_subMenu_Tablecell29"><a id="_subMenu__warrantBanding" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_warrantbanding.aspx">Warrant Banding</a></td>
+	</tr><tr id="_subMenu__trFuturesBanding">
+		<td id="_subMenu_Tablecell30"><a id="_subMenu__futuresBanding" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_futuresbanding.aspx">Futures Banding</a></td>
+	</tr><tr id="_subMenu__trWCBanding">
+		<td id="_subMenu_Tablecell31"><a id="_subMenu__wcBanding" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_wcbanding.aspx">WC Banding</a></td>
+	</tr><tr id="_subMenu__trWTBanding">
+		<td id="_subMenu_Tablecell33"><a id="_subMenu__wtBanding" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_wtbanding.aspx">WT Banding</a></td>
+	</tr><tr id="_subMenu__trMonthlyVolumes">
+		<td id="_subMenu_Tablecell34"><a id="_subMenu__monthlyVolumes" class="mainnav" href="https://secure.lme.com/Data/community/Dataprices_monthly_volumes.aspx">Monthly Volumes</a></td>
+	</tr><tr id="_subMenu__trPlatformVolumes" style="display:none;">
+		<td id="_subMenu_Tablecell52"><a id="_subMenu__PlatformVolumes" class="mainnav" href="https://secure.lme.com/Data/community/platform_volumes.aspx">Platform Volumes</a></td>
+	</tr><tr id="_subMenu_TablerowSpacer3x" NAME="Tablerow1">
+		<td id="_subMenu_TableSpacerCell1x" NAME="Tablecell5"></td>
+	</tr><tr id="_subMenu__trWTBandingHeader_Underline" NAME="_trWTBandingHeader_Underline">
+		<td id="_subMenu_Tablecell38" NAME="Tablecell6"><img id="_subMenu_Image5" hspace="0" vspace="0" src="/gfxs/gray.gif" height="1" width="101" border="0" /></td>
+	</tr><tr id="_subMenu__trGlossary">
+		<td id="_subMenu_Tablecell48"><a id="_subMenu__glossary" class="mainnav" href="http://www.lme.com/glossary.asp" target="_blank">LME Glossary</a></td>
+	</tr><tr id="_subMenu__trCalendar">
+		<td id="_subMenu_Tablecell49"><a id="_subMenu__calendar" class="mainnav" href="http://www.lme.com/calendar.asp" target="_blank">Trading Calendar</a></td>
+	</tr><tr id="_subMenu__trHistorical">
+		<td id="_subMenu_Tablecell50"><a id="_subMenu__historical" class="mainnav" href="http://www.lme.com/historical_data.asp" target="_blank">Historical Data</a></td>
+	</tr><tr>
+		<td height="5"></td>
+	</tr><tr>
+		<td height="5"></td>
+	</tr><tr id="_subMenu__trLogOut">
+		<td id="_subMenu_Tablecell51" NAME="Tablecell4"><a id="_subMenu__logOut" class="mainnav" href="javascript:__doPostBack('_subMenu$_logOut','')">Log Out</a></td>
+	</tr>
+</table>
+</TD>
+								</TR>
+							</TABLE>
+						</TD>
+						<TD WIDTH="13">&nbsp;</TD>
+						<TD WIDTH="220">
+							<P><SPAN CLASS="titletext">LME Free Data Service</SPAN><BR>
+								<BR>
+							</P>
+						</TD>
+						<TD WIDTH="13">&nbsp;</TD>
+						<TD WIDTH="128"><div id="_userID__data">
+	<SPAN 
+class=bodytextbold>Logged in as:</SPAN><BR>
+<span id="_userID__userId" class="bodytext">jfmoxley</span>
+
+</div>
+</TD>
+					</TR>
+					<TR ALIGN="left" VALIGN="top">
+						<TD WIDTH="13">&nbsp;</TD>
+						<td colspan="3">
+							<table border="0" cellpadding="0" cellspacing="0" ID="Table3">
+								<tr>
+									<td colspan="13">
+										<br>
+										<script type="text/javascript" src="https://secure.lme.com/Data/LMEfdsminormTop.js"></script>
+										<SPAN CLASS="bodytextbold">Daily Stocks and Prices: Minor Metals</SPAN><BR>
+										<BR>
+										
+<!-- control start -->
+<tr>
+	<td colspan="13">
+		<p>The LME publishes daily official prices (both bid and offer) for cobalt and 
+			molybdenum traded on the Exchange. The Official Prices established are basis 
+			‘open-outcry’ trading at the end of the first Ring session of the day. The 
+			Settlement Price is the official cash seller’s price (offer).
+		</p>
+		<p>Minor Metals contracts commenced trading on the Ring on 22nd February 2010 with 
+			futures prompt dates from 3 months. During this launch period Cash Buyer and 
+			Cash Seller &amp; Settlement prices are not available until the Cash Prompt 
+			Date becomes tradable.
+		</p>
+		<p><a href="http://www.lme.com/minormetals/index.asp">Check the minor metals section of 
+				lme.com for more information on the launch.</a></p>
+		<p>All LME prices are reported in US Dollars per metric tonne.</p>
+	</td>
+</tr>
+<tr>
+	<td colspan="13">
+		<img src="/gfxs/spacer.gif" width="1" height="20">
+	</td>
+</tr>
+<tr>
+	<td colspan="13"><img src="/gfxs/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+	<td colspan="13">
+		<P><B class="secondaryHeader">LME Official Prices, US$ per tonne for
+				16 December 2010
+			</B>
+		</P>
+		
+		<br>
+		<!-- new metals table start here  -->
+		<br>
+		<table border="0" cellpadding="0" cellspacing="0" width="579">
+			<tbody>
+				<tr>
+					<td colspan="2"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td colspan="5" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="2" width="1"></td>
+				</tr>
+				<tr>
+					<td><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" valign="middle"><img src="/gfxs/spacer.gif" height="10" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top" width="13%"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top" width="12%"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" valign="middle"><b>&nbsp;</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><b class="smallBlack">COBALT</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><b class="smallBlack">MOLYBDENUM</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" valign="middle"><img src="/gfxs/spacer.gif" height="10" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;Cash buyer</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						38000.00
+					</td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						32700.00
+					</td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;Cash seller &amp; 
+							&nbsp;settlement&nbsp;</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						38500.00
+					</td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						34700.00
+					</td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;3-months buyer</b></td>
+					<td bgcolor="#c9c9c9" valign="middle"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						37750.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						33000.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;3-months seller</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						38250.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						35000.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;15-months buyer</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						36600.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						34300.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" height="39" valign="middle"><b>&nbsp;15-months seller</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" valign="middle">
+						37600.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">
+						36300.00
+					</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+			</tbody>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="13"><img src="/gfxs/spacer.gif" width="1" height="10"></td>
+</tr>
+<!-- new metals table end here -->
+<!-- new settlment and conversion tables start here -->
+<tr>
+	<td colspan="13">
+		<br>
+		<br>
+		<a name="SettleConv"></a>
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td valign="top">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td valign="top">
+										<b class="secondaryHeader">Settlement conversion exchange rates</b><br>
+										<br>
+										<br>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td colspan="5" bgcolor="#c9c9c9" height="2"><img src="/gfxs/spacer.gif" height="2" width="1"></td>
+								</tr>
+								<tr>
+									<td rowspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+									<td height="33" valign="middle" width="120">&nbsp;Sterling</td>
+									<td rowspan="8" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+									<td align="right" valign="middle" width="60">1.5613&nbsp;</td>
+									<td rowspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+								</tr>
+								<tr>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+								</tr>
+								<tr>
+									<td bgcolor="#fafafa" height="33" valign="middle">&nbsp;Yen</td>
+									<td align="right" bgcolor="#fafafa" valign="middle">84.07&nbsp;</td>
+								</tr>
+								<tr>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+								</tr>
+								<tr>
+									<td height="33" valign="middle">&nbsp;Euro</td>
+									<td align="right" valign="middle">1.3241&nbsp;</td>
+								</tr>
+								<tr>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+									<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+								</tr>
+								<tr>
+									<td colspan="6" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" border="0" height="1" width="1"></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- new settlment and conversion tables end here -->
+	</td>
+</tr>
+<tr>
+	<td colspan="13"><img src="/gfxs/spacer.gif" width="1" height="10"></td>
+</tr>
+<tr>
+	<td colspan="13">
+		<!-- New stocks table start here -->
+		<a name="stocks"></a>
+		
+		<table border="0" cellpadding="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td>
+						<a name="Stocks"></a>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" valign="top"><br>
+						<br>
+						<b class="secondaryHeader">LME Official Minor Metals Opening Stock in tonnes</b><br>
+						<br>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="579">
+			<tbody>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="left" valign="top"><b class="smallBlack">&nbsp;Date</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top" width="87"><b class="smallBlack">&nbsp;COBALT&nbsp;</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><b class="smallBlack">&nbsp;MOLYBDENUM&nbsp;</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#eeeeee" valign="top"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td height="39" valign="middle">&nbsp;<b>
+							13 December 2010
+							&nbsp;</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" height="39" valign="middle">&nbsp;209&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">&nbsp;288&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td height="39" valign="middle">&nbsp;<b> Live Warrants &nbsp;</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" height="39" valign="middle">&nbsp;153&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">&nbsp;288&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td height="39" valign="middle">&nbsp;<b> Cancelled Warrants &nbsp;</b></td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" bgcolor="#fafafa" height="39" valign="middle">&nbsp;56&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+					<td align="center" valign="middle">&nbsp;0&nbsp;</td>
+					<td bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+				<tr>
+					<td colspan="7" bgcolor="#c9c9c9"><img src="/gfxs/spacer.gif" height="1" width="1"></td>
+				</tr>
+			</tbody>
+		</table>
+		<!-- new stocks table end here -->
+	</td>
+</tr>
+<tr>
+	<td colspan="13"><img src="/gfxs/spacer.gif" width="1" height="20"></td>
+</tr>
+<tr>
+	<td colspan="13">
+		<br>
+		<br>
+		<br>
+		<p><B class="secondaryHeader">Historic Trading Data</B></p>
+		<table cellpadding="0" cellspacing="5" border="0">
+			<tr>
+				<td>To view historic data:</td>
+				<td><img src="/gfxs/spacer.gif" width="5" height="1"></td>
+				<td>
+					<select name="_searchForm$_lstdate" id="_searchForm__lstdate" class="dropDownSearchHistory">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+	<option value="12">12</option>
+	<option value="13">13</option>
+	<option value="14">14</option>
+	<option value="15">15</option>
+	<option value="16">16</option>
+	<option value="17">17</option>
+	<option value="18">18</option>
+	<option value="19">19</option>
+	<option selected="selected" value="20">20</option>
+	<option value="21">21</option>
+	<option value="22">22</option>
+	<option value="23">23</option>
+	<option value="24">24</option>
+	<option value="25">25</option>
+	<option value="26">26</option>
+	<option value="27">27</option>
+	<option value="28">28</option>
+	<option value="29">29</option>
+	<option value="30">30</option>
+	<option value="31">31</option>
+
+</select>
+				</td>
+				<td><img src="/gfxs/spacer.gif" width="3" height="1"></td>
+				<td>
+					<select name="_searchForm$_lstmonth" id="_searchForm__lstmonth" class="dropDownSearchHistory">
+	<option value="1">Jan</option>
+	<option value="2">Feb</option>
+	<option value="3">Mar</option>
+	<option value="4">Apr</option>
+	<option value="5">May</option>
+	<option value="6">Jun</option>
+	<option value="7">Jul</option>
+	<option value="8">Aug</option>
+	<option value="9">Sep</option>
+	<option value="10">Oct</option>
+	<option value="11">Nov</option>
+	<option selected="selected" value="12">Dec</option>
+
+</select>
+				</td>
+				<td><img src="/gfxs/spacer.gif" width="3" height="1"></td>
+				<td>
+					<select name="_searchForm$_lstyear" id="_searchForm__lstyear" class="dropDownSearchHistory">
+	<option value="2010">2010</option>
+
+</select>
+				</td>
+				<td><img src="/gfxs/spacer.gif" width="5" height="1"></td>
+				<td>
+					<input type="image" name="_searchForm$_search" id="_searchForm__search" src="/gfxs/go.gif" border="0" />
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+<tr>
+	<td colspan="13"><img src="/gfxs/spacer.gif" width="5" height="10"></td>
+</tr>
+<tr>
+	<td colspan="13">
+<!-- control end -->
+
+									</td>
+								</tr>
+								<TR ALIGN="left" VALIGN="top">
+									<TD WIDTH="139" VALIGN="bottom"><br>
+										<br>
+										<img id="_image6" hspace="0" vspace="0" src="../gfxs/lme-logo.gif" height="45" width="101" border="0" /></TD>
+									<TD WIDTH="13">&nbsp;</TD>
+									<TD WIDTH="420" VALIGN="bottom"><br>
+										<br>
+										
+<span class="smaltext">
+<a href="http://www.lme.com/legal.asp" target="_blank">Legal</A> &nbsp;&nbsp;<a href="http://www.lme.com/privacypolicy.asp" target="_blank">Privacy Policy</A><br />
+
+The contents of this website are<BR> &copy; 2007 The London Metal Exchange 
+Limited<BR> <A HREF="http://www.lme.com/" TARGET="_blank">www.lme.com</A>
+</span>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3125340-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+</TD>
+									<TD WIDTH="13">&nbsp;</TD>
+									<TD WIDTH="128">&nbsp;</TD>
+								</TR>
+								<TR ALIGN="left" VALIGN="top">
+									<TD>&nbsp;</TD>
+									<TD>&nbsp;</TD>
+									<TD>&nbsp;</TD>
+									<TD>&nbsp;</TD>
+									<TD>&nbsp;</TD>
+								</TR>
+								<tr>
+									<td colspan="5"><img src="/gfxs/spacer.gif" width="5" height="250"></td>
+								</tr>
+							</table>
+		
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWLwKRrcnIDwLZlfj2AgLH0tGlCgLG0tGlCgLF0tGlCgLE0tGlCgLD0tGlCgLC0tGlCgLB0tGlCgLQ0tGlCgLf0tGlCgLH0pGmCgLH0p2mCgLH0pmmCgLH0qWmCgLH0qGmCgLH0q2mCgLH0qmmCgLH0rWmCgLH0vGlCgLH0v2lCgLG0pGmCgLG0p2mCgLG0pmmCgLG0qWmCgLG0qGmCgLG0q2mCgLG0qmmCgLG0rWmCgLG0vGlCgLG0v2lCgLF0pGmCgLF0p2mCgKZ0cL/BwKY0cL/BwKb0cL/BwKa0cL/BwKd0cL/BwKc0cL/BwKf0cL/BwKO0cL/BwKB0cL/BwKZ0YL8BwKZ0Y78BwKZ0Yr8BwLx+dPFDAKQ4oKSBjeEX/J/KkDXVFxjtS1Md1rtbdaQ" /></form>
+		</TD>
+		
+		<td width=10>
+				</td>
+				<td cellpadding="10">
+				<script type="text/javascript" src="https://secure.lme.com/Data/LMEfdsminormRHS.js">
+				</script>
+				
+				
+				
+				
+		</td>
+		</TR></TBODY></TABLE>
+	</BODY>
+</HTML>

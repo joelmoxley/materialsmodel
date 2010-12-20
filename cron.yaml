@@ -1,0 +1,10 @@
+cron:
+    
+#
+#  Site maintenance
+#
+
+- description: Fetch new cobalt prices
+  url: /cron/cobalt/
+  schedule: every day 1:00
+  timezone: America/New_York
